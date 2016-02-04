@@ -1,0 +1,158 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/ColorPrimary"
+    tools:context="com.example.gokul.pixcel.PostDetailsActivity">
+    <include
+        android:id="@+id/tool_bar2"
+        layout="@layout/tool_bar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_below="@+id/tool_bar2"
+        android:layout_height="match_parent"
+        >
+        <com.sothree.slidinguppanel.SlidingUpPanelLayout
+            xmlns:sothree="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/sliding_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            sothree:umanoPanelHeight="100dp"
+            sothree:umanoShadowHeight="4dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerViewComments"
+                    android:layout_below="@+id/firstDivider"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No comments yet"
+                    android:layout_centerInParent="true"
+                    android:textSize="25sp"
+                    android:textColor="@android:color/darker_gray"
+                    android:id="@+id/textNoComments"
+                    />
+                <View
+                    android:id="@+id/firstDivider"
+                    android:layout_below="@+id/llSendComment"
+                    android:layout_height="1.25dp"
+                    android:layout_width="match_parent"
+                    android:background="@color/ColorAccent" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:minHeight="65dp"
+                    android:id="@+id/llSendComment"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_height="50dp">
+                    <EditText
+                        android:layout_width="0dp"
+                        android:textColor="@color/white"
+                        android:hint="Send a comment..."
+                        android:textColorHint="@android:color/darker_gray"
+                        android:textSize="17.5sp"
+                        android:background="@null"
+                        android:id="@+id/editComment"
+                        android:gravity="center_vertical"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".85"/>
+                    <ImageButton
+                        android:layout_width="0dp"
+                        android:id="@+id/btnSendComment"
+                        android:layout_weight=".15"
+                        android:background="@drawable/sent_100"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+            <!-- SLIDING LAYOUT -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_below="@+id/multiple_actions"
+                android:layout_height="match_parent"
+                android:background="@color/ColorPrimary"
+                android:orientation="vertical"
+                android:clickable="true"
+                android:focusable="false"
+                android:id="@+id/dragView">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:layout_height="match_parent">
+                    <ImageButton
+                        android:layout_width="50dp"
+                        android:layout_height="25dp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/collapse_arrow"
+                        />
+
+                    <com.mikhaellopez.circularimageview.CircularImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/placeholder_user"
+                        app:border_color="#EEEEEE"
+                        android:layout_marginTop="25dp"
+                        android:id="@+id/imgProfileDetails"
+                        app:border_width="1dp"
+                        app:shadow="false"
+                        />
+                    <TextView
+                        android:id="@+id/textPanelHeadline"
+                        android:layout_width="match_parent"
+                        android:layout_marginLeft="16dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:layout_marginTop="35dp"
+                        android:layout_toRightOf="@+id/imgProfileDetails"
+                        android:layout_height="wrap_content"
+                        android:text="FirstName LastName"
+                        android:textSize="17.5sp"
+                        />
+
+                    <TextView
+                        android:text="Dropped this pic 1 foot away"
+                        android:id="@+id/textDistance"
+                        android:textColor="@color/white"
+                        android:layout_below="@+id/textPanelHeadline"
+                        android:layout_marginLeft="16dp"
+                        android:layout_toRightOf="@+id/imgProfileDetails"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        />
+                    <ImageView
+                        android:id="@+id/imgPostDetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textDistance"
+                        android:layout_alignParentBottom="true"
+                        android:textColor="@color/ColorPrimary"
+                        android:text="Content"
+                        android:textSize="20sp"
+                        />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+        </com.sothree.slidinguppanel.SlidingUpPanelLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,61 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/picfly"
+    tools:context=".MainActivity">
+
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:orientation="vertical"
+    android:layout_centerHorizontal="true"
+
+    android:layout_centerVertical="true"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="Picxel"
+        android:layout_marginBottom="50dp"
+        android:textSize="75sp"
+        android:layout_gravity="center_horizontal"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_width="300dp"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center"
+        android:layout_marginBottom="50dp"
+        android:text="Unravel the history behind the places you visit"
+        android:textSize="30sp"
+        android:textColor="@android:color/white"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:id="@+id/llLoginFacebook"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:src="@drawable/facebook_final_white"
+            android:layout_width="42.5dp"
+            android:layout_height="42.5dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="42.5dp"
+            android:background="@drawable/fb_background"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:textSize="20sp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="1dp"
+            android:textColor="@android:color/white"
+            android:text="Connect with Facebook"/>
+    </LinearLayout>
+</LinearLayout>
+
+</RelativeLayout>
